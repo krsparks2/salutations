@@ -1,18 +1,6 @@
 # salutations
 Project 1 Team Venus
 
-LBryant
-
-Hello
-
-tracys changes
-making more changes just because
-
-
-Keli's changes 
-
-<!-- Notes to start README -->
-
 # Purpose 
 So you never have to miss a sunset and sunrise again! This app is can help a user know the exact time for the sunrise and/or sunset in a location they are at or planning to go too with just a click of a button! Oh, how could I forget the added bonus feature! On click of entering the location and date for the desired sunset/sunrise detial the user will get a random cute cat photo and fact. Everytime!  
 
