@@ -29,6 +29,6 @@ Github:
 Deployed:
 
 # Contributors 
-Tracy Rose Guajardo
-Keli-Rene Sparks
-Lea Bryant
+- Tracy Rose Guajardo, email
+- Keli-Rene Sparks, email
+- Lea Bryant, email
