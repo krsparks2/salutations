@@ -29,3 +29,8 @@ Web-Api's
 # Team Venus Websites 
 Github:
 Deployed:
+
+# Contributors 
+Tracy Rose Guajardo
+Keli-Rene Sparks
+Lea Bryant
