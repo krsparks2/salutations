@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link href="./assets/mobiscroll.javascript.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="assets/style.css">
     <title>Salutations from the Sun</title>
 </head>
@@ -25,7 +26,10 @@
                 Enter Location:<input class="Location" type="text" placeholder="City, State">
             </div>
             <div>
-                Choose Date: <input type="text" id="datepicker">
+                <label>
+                    Choose Date:
+                    <input id="demo-anchored" mbsc-input data-input-style="outline" data-label-style="stacked" placeholder="Please select..." />
+                </label>
             </div>
             <div>
                 <button class="button">Submit</button>
@@ -52,6 +56,7 @@
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <script src="./assets/mobiscroll.javascript.min.js"></script>
     <script src="./assets/script.js"></script>
 </body>
 </html>
