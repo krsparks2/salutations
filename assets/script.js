@@ -19,7 +19,7 @@ function locationInput() {
 }
 
 function getCoordinates() {
-    var queryURL = "http://api.openweathermap.org/geo/1.0/direct?q=" + location + "&appid=" + apiKey;
+    var queryURL = "https://api.openweathermap.org/geo/1.0/direct?q=" + location + "&appid=" + apiKey;
 
     fetch(queryURL).then(function(result) {
         return result.json()
