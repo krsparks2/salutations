@@ -1,14 +1,4 @@
 
-<<<<<<< HEAD
-// $(function () {
-//     $('#datepicker').datepicker({
-//       changeMonth: true,
-//       changeYear: true,
-//     });
-//   });
-
-=======
->>>>>>> origin
 mobiscroll.datepicker('#demo-anchored', {
     controls: ['calendar'],
     display: 'anchored'
