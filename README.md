@@ -19,7 +19,7 @@ Bulma
 Web-Api's 
 -https://sunrise-sunset.org/api
 -https://cataas.com/#/
--https://github.com/wh-iterabb-it/meowfacts
+-weather API
 
 # Snapshoot of Demo
 (show screen shot once completed)
@@ -29,6 +29,6 @@ Github:
 Deployed:
 
 # Contributors 
-- Tracy Rose Guajardo, email
-- Keli-Rene Sparks, email
-- Lea Bryant, email
+- Tracy Rose Guajardo, tracyroseguajardo@gmail.com
+- Keli-Rene Sparks, krsparks2@yahoo.com
+- Lea Bryant, ldbryant3220@gmail.com
