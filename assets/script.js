@@ -6,7 +6,6 @@
 //     });
 //   });
 
-
 mobiscroll.datepicker('#demo-anchored', {
     controls: ['calendar'],
     display: 'anchored'
