@@ -41,8 +41,13 @@ img{
 .button{
     font-size: 30px;
     font-weight: bold;
-}
+    margin: auto;
+    display: block;
+} 
 
+p{
+    text-align: center;
+}
 .displayBox {
     display: flex;
     align-items: stretch;
