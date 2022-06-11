@@ -21,7 +21,7 @@ function locationInput() {
 }
 
 function getCoordinates() {
-    var queryURL = "http://api.openweathermap.org/geo/1.0/direct?q=" + location + "&appid=" + apiKey;
+    var queryURL = "https://api.openweathermap.org/geo/1.0/direct?q=" + location + "&appid=" + apiKey;
 
     fetch(queryURL).then(function(result) {
         return result.json()
@@ -34,7 +34,7 @@ function makeCall(lat, lon) {
     var date = dateEl.value;
     console.log(date);
 
-    fetch("https://api.sunrise-sunset.org/json?lat=" + lat + "&lng=" + lon + "&date=" + date).then(function (result) {
+    fetch("https://api.sunrise-sunset.org/json?lat=" + lat + "&lng=" + lon + "&date=" + date + "&formatted=1").then(function (result) {
         return result.json()
     }).then(function(data) {
         console.log(data);

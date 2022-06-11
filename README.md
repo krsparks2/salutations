@@ -17,6 +17,7 @@ So you never have to miss a sunset or a sunrise again. This app can help a user 
 * Web-Api's 
     - https://sunrise-sunset.org/api
 * weather API
+    - http://api.openweathermap.org 
     
 
 # Snapshoot of Demo
