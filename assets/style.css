@@ -1,0 +1,44 @@
+body, html {
+	height: 100%;
+	width: 100%;
+	position: relative;
+    font-family: 'Amatic SC', cursive;
+    font-family: 'Indie Flower', cursive;
+    background-image: linear-gradient( #bf033b 0%, #ffc719 74%);
+    background-position: left top, right top, bottom;
+    overflow:auto;
+}
+
+.columns{
+    border-radius: 10px;
+    border: solid #242428 5px;
+    margin-left: 2%;
+    margin-right: 2%;
+    border-radius: 5px;
+    box-sizing:inherit; 
+}
+
+.title{
+    font-size: 60px;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.subtitle{
+    font-size: 30px;
+    text-align: center;
+}
+
+.where{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+img{
+    border-radius: 15px 50px;
+}
+
+.button{
+    font-size: 30px;
+    font-weight: bold;
+}

@@ -7,54 +7,62 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link href="./assets/mobiscroll.javascript.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="assets/style.css">
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Indie+Flower&display=swap" rel="stylesheet">
+    <!-- tab title -->
     <title>Salutations from the Sun</title>
+    <link rel="icon" href="assets/sun-icon.jpeg">
 </head>
 <body>
-    <section class="hero is-medium is-link">
+    <section class="hero"> 
         <div class="hero-body">
-            <p class="title">
+            <h1 class="title">
                  Salutations from the Sun!
-            </p>
+            </h1>
+            <!-- changed <p> to <h1> -->
             <p class="subtitle">
-                 A handy app to find the time of the sunrise and the sunset, plus Ducks!
+                 A handy app to find the time of the sunrise and the sunset any where!
             </p>
         </div>
     </section>
     <div class="columns">
-        <div class="column">
-            <div>
-                Enter Location:<input class="Location" type="text" placeholder="City, State">
+        <div class="column is-one-third"><div>
+            <div class="where">
+            Enter Location:
+            <label>
+                <input class="Location" type="text" mbsc-input data-input-style="outline" placeholder="City, State" >
+            </label>
             </div>
-            <div>
-                <label>
-                    Choose Date:
+            <br>
+            <div class="where">
+            Choose a Date:
+                <label class="date">
                     <input id="demo-anchored" mbsc-input data-input-style="outline" data-label-style="stacked" placeholder="Please select..." />
                 </label>
             </div>
-            <div>
-                <button id="submit" class="button">Submit</button>
+                <button id="submit" class="button is-ghost">Submit</button>
             </div>
         </div>
-        <div class="column is-two-thirds">
-            <!-- <div class="card">
-                <div class="card-image">
-                  <figure class="image is-5by4">
-                    <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
-                  </figure>
-                </div>
-                <div class="card-content">             
-                  <div class="content">
-                  </div>
-                </div>
-              </div> -->
-            <div class="displayBox">
-
+    <div class="column is-two-thirds" id="column1">
+        <!-- <div class="card">
+            <div class="card-image">
+              <figure class="image is-5by4">
+                <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
+              </figure>
+            </div> -->
+             <div class="card-content">             
+              <div class="content">
+                    <img src="assets/sun-calculator.png" alt="Sun-set-rise">
+              </div>
             </div>
+        <div class="displayBox">
         </div>
     </div>
+</div>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
     <script src="./assets/mobiscroll.javascript.min.js"></script>
+main
     <script src="./assets/script.js"></script>
 </body>
 </html>
