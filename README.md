@@ -10,20 +10,20 @@ So you never have to miss a sunset or a sunrise again. This app can help a user 
 - Results will show the user the sunrise and sunset time for the location of their choice.  
 
 # Features 
-HTML 
-CSS
-JavaScript
-Bulma 
-Web-Api's 
--https://sunrise-sunset.org/api
--weather API
+* HTML 
+* CSS
+* JavaScript
+* Bulma 
+* Web-Api's 
+    - https://sunrise-sunset.org/api
+* weather API
 
 # Snapshoot of Demo
 (show screen shot once completed)
 
 # Team Venus Websites 
-Github:
-Deployed:
+* Github:
+* Deployed:
 
 # Contributors 
 - Tracy Rose Guajardo, tracyroseguajardo@gmail.com
