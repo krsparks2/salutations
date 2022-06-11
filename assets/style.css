@@ -50,3 +50,11 @@ img{
     font-size: 30px;
     font-weight: bold;
 }
+
+.solar-noon {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: bold;
+}
