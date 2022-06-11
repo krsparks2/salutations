@@ -42,3 +42,11 @@ img{
     font-size: 30px;
     font-weight: bold;
 }
+
+.displayBox {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    font-size: 30px;
+    font-weight: bold;
+}
