@@ -12,11 +12,9 @@ var submitBtn = document.getElementById("submit");
 var locationEl = document.getElementsByClassName("location");
 var dateEl = document.getElementById("demo-anchored");
 var displayEl = document.getElementsByClassName("displayBox");
-var solarNoonEl = document.getElementsByClassName("solar-noon")
 
 function locationInput() {
     var location = locationEl.value;
-
     getCoordinates(location);
 }
 
@@ -47,23 +45,19 @@ function sunEvent(results) {
 
     var sunrise = results.sunrise;
     var sunset = results.sunset;
-    var highnoon = results.solar_noon;
     console.log(sunrise);
     console.log(sunset);
-    console.log(highnoon);
 
-    var sunriseEl = document.createElement("h2");
+    var sunriseEl = document.createElement("h2")
     var sunsetEl = document.createElement("h2");
 
     //sunriseEL.innerText = sunrise;
     
     sunriseEl.textContent = "sunrise: " + sunrise;
     sunsetEl.textContent = "sunset: " + sunset;
-    highnoonEl.textContent = "high noon: " + highnoon;
 
     displayEl[0].appendChild(sunriseEl);
     displayEl[0].appendChild(sunsetEl);
-    solarNoonEl[0].appendChild(highnoonEl)
  }
 
 
