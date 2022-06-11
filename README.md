@@ -1,15 +1,13 @@
 # salutations
-Project 1 Team Venus
+# Project 1 Team Venus
 
 # Purpose 
-So you never have to miss a sunset or a sunrise again. This app can help a user know the exact time for the sunrise and/or sunset in any location with just a click of a button. Oh, how could we forget: the added bonus feature! On click of entering the location and date for the desired sunset/sunrise detail, the user will get a random cute duck photo. Everytime!  
+So you never have to miss a sunset or a sunrise again. This app can help a user know the exact time for the sunrise and/or sunset in any location with just a click of a button. Oh, how could we forget: the added bonus feature! On click of entering the location and date for the desired sunset/sunrise detail.Everytime!  
 
 # User-Objective 
 -  Onclick the user will be able to search for the location and date for sunrise/sunset.
-- After the user enters information and clicks the sundial (search button) it will take user to the results. 
-- Results will show the user the date and location of their choice. 
-- Page will display a random duck picture. 
-
+- After the user enters information and clicks the search button it will take user to the results. 
+- Results will show the user the sunrise and sunset time for the location of their choice.  
 
 # Features 
 HTML 
