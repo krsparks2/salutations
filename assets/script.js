@@ -54,8 +54,7 @@ function sunEvent(results) {
 
     var sunriseEl = document.createElement("h2");
     var sunsetEl = document.createElement("h2");
-
-    //sunriseEL.innerText = sunrise;
+    var highnoonEl = document.createElement("h2");
     
     sunriseEl.textContent = "sunrise: " + sunrise;
     sunsetEl.textContent = "sunset: " + sunset;
