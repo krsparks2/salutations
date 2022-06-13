@@ -9,10 +9,10 @@ var apiKey = "2f5d99e17f842067dee162b834d439f8";
 
 //DOM Elements
 var submitBtn = document.getElementById("submit");
-var locationEl = document.getElementsByClassName("location");
+var locationEl = document.getElementById("location");
 var dateEl = document.getElementById("demo-anchored");
-var displayEl = document.getElementsByClassName("displayBox");
-var solarNoonEl = document.getElementsByClassName("solar-noon")
+var displayEl = document.getElementById("displayBox");
+var solarNoonEl = document.getElementById("solar-noon")
 
 function locationInput() {
     var location = locationEl.value;
@@ -20,21 +20,22 @@ function locationInput() {
     getCoordinates(location);
 }
 
-function getCoordinates() {
+function getCoordinates(location) {
     var queryURL = "https://api.openweathermap.org/geo/1.0/direct?q=" + location + "&appid=" + apiKey;
 
     fetch(queryURL).then(function(result) {
         return result.json()
         }).then(function (data) {
-            makeCall(data.lat, data.lon);
+            // console.log(data)
+            makeCall(data[0].lat, data[0].lon);
         });
 };
 
 function makeCall(lat, lon) {
     var date = dateEl.value;
-    console.log(date);
+    // console.log("https://api.sunrise-sunset.org/json?lat=" + lat + "&lng=" + lon + "&date=" + '2022-06-21' + "&formatted=1");
 
-    fetch("https://api.sunrise-sunset.org/json?lat=" + lat + "&lng=" + lon + "&date=" + date + "&formatted=1").then(function (result) {
+    fetch("https://api.sunrise-sunset.org/json?lat=" + lat + "&lng=" + lon + "&date=" + date + "&formatted=0").then(function (result) {
         return result.json()
     }).then(function(data) {
         console.log(data);
@@ -44,10 +45,12 @@ function makeCall(lat, lon) {
 
 function sunEvent(results) {
     console.log(results);
+    displayEl.innerHTML = '';
+    solarNoonEl.innerHTML = '';
 
     var sunrise = results.sunrise;
     var sunset = results.sunset;
-    var highnoon = results.solar_noon;
+    var highnoon = new Date(results.solar_noon).toLocaleTimeString();
     console.log(sunrise);
     console.log(sunset);
     console.log(highnoon);
@@ -60,12 +63,10 @@ function sunEvent(results) {
     sunsetEl.textContent = "sunset: " + sunset;
     highnoonEl.textContent = "high noon: " + highnoon;
 
-    displayEl[0].appendChild(sunriseEl);
-    displayEl[0].appendChild(sunsetEl);
-    solarNoonEl[0].appendChild(highnoonEl)
- }
-
-
+    displayEl.append(sunriseEl, sunsetEl);
+    // displayEl[0].appendChild(sunsetEl);
+    solarNoonEl.append(highnoonEl);
+}
 
 //Event Listeners
 submitBtn.addEventListener("click", locationInput)
