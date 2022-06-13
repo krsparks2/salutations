@@ -2,11 +2,11 @@ body, html {
 	height: 100%;
 	width: 100%;
 	position: relative;
-    font-family: 'Amatic SC', cursive;
-    font-family: 'Indie Flower', cursive;
+    font-family: 'Patrick Hand', cursive;
     background-image: linear-gradient( #bf033b 0%, #ffc719 74%);
     background-position: left top, right top, bottom;
     overflow:auto;
+    color: black;
 }
 
 .columns{
@@ -16,6 +16,9 @@ body, html {
     margin-right: 2%;
     border-radius: 5px;
     box-sizing:inherit; 
+    display: flex;
+  flex-wrap: wrap;
+  padding: 0 6px;
 }
 
 .title{
@@ -29,13 +32,9 @@ body, html {
     text-align: center;
 }
 
-.where{
+p{
     font-size: 30px;
     font-weight: bold;
-}
-
-img{
-    border-radius: 15px 50px;
 }
 
 .button{
@@ -48,7 +47,8 @@ img{
 p{
     text-align: center;
 }
-.displayBox {
+
+.displayBox ::cue {
     display: flex;
     align-items: stretch;
     justify-content: space-between;
@@ -72,4 +72,24 @@ p{
 #demo-anchored{
     background-color: #242428;
     color: white;
+}
+
+#sunrise{   
+    position: auto;
+    left:250px;
+    bottom: 100px;
+    margin-right: 500px;
+}
+
+
+#sunset{
+    position:auto;
+    bottom: 100px;
+    right: 50px;
+    object-position:bottom right;
+}
+
+#highnoon{
+    position: auto;
+    width: 22%;
 }

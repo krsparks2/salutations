@@ -69,3 +69,4 @@ function sunEvent(results) {
 
 //Event Listeners
 submitBtn.addEventListener("click", locationInput)
+
