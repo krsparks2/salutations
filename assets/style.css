@@ -3,85 +3,50 @@
   }
 
 body, html {
-	height: 100%;
-	width: 100%;
-	position: relative;
-    font-family: 'Patrick Hand', cursive;
+	height: 100vh;
+    margin: 0%;
+    font-family: 'Patrick Hand', sans-serif;
     background: linear-gradient( #bf033b 0%, #ffc719 70%);
     background-position: left top, right top, bottom;
     overflow:auto;
     color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
-
-.columns{
-    box-sizing: border-box;
-    width: 500 50px;
-    height: 50 50px;  
-    padding: 5px;
-    border-radius: 10px;
-    border: solid #242428 5px;
-    margin-left: 2%;
-    margin-right: 2%;
-    border-radius: 5px;
-    display: flexbox;
-    flex-wrap: wrap;
-}
-
-.title{
-    font-size: 60px;
+/* Hero */
+#h1{
+    font-size: 80px;
     text-align: center;
     font-weight: bolder;
     color: black;
 }
-
-.subtitle{
-    font-size: 30px;
+#description{
+    font-size: 35px;
     text-align: center;
     color: black;
 }
 
-
-img{
-    border-radius: 15px 50px;
-    justify-content: center;
+main {
+    display: flex;
+    flex-wrap: wrap;
 }
+  
+ /* Date and Location */
 
-.button, .where, .column1, input[type="text"]{
+aside {
+    flex: 1.5;
+    padding: 5px;
+    text-align: center;
     font-size: 30px;
     font-weight: bold;
-    margin: auto;
-    display: block;
-} 
+  }
 
-.content {
-    width: 200px;
-    height: 200px;
-    padding: 20px;
-}
-
-p{
-    text-align: center;
-}
 .submitBtn {
     border-radius: 10rem;
-    font-family: 'Patrick Hand', cursive;
-    background-image: black;
-    background-position: left top, right top, bottom;
-}
-
-#displayBox {
-    display: flex;
-    align-items: stretch;
-    justify-content: space-between;
+    font-family: 'Patrick Hand', sans-serif;
     font-size: 30px;
-    font-weight: bold;
-}
-
-#solar-noon {
-    display: flex;
-    align-items: stretch;
-    justify-content: center;
-    font-weight: bold;
+    font-weight: bolder;
 }
 
 #location{
@@ -94,40 +59,49 @@ p{
     color: white;
 }
 
-#sunrise{   
-    position: auto;
-    left:250px;
-    bottom: 100px;
-    margin-right: 500px;
-}
-.column1{
+#solar{
+    flex: 3;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
-    align-content: center;
-}
-
-#sunset{
-    position:auto;
-    bottom: 100px;
-    right: 50px;
-    object-position:bottom right;
-}
-
-#highnoon{
-    position: auto;
-    width: 22%;
-    align-content: right;
+#sunrise, #noon, #sunset{
+        border-style: solid;
+        border-width: 3px;
+        padding: 5px;
+        flex: 0 10 235px;
+        /* transform: rotate(5deg); */
+        box-shadow: 5px 5px 5px #aaaaaa;
+        margin: 10px;     
 }
 
-.enter{
-    margin-top: 15%;
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
 }
 
-input[type="text"] {
-    width: 400px;
+.title {
+    text-align: center;
+    text-decoration: underline;
+    color: black;
 }
 
-.is-child {
+h2{
+    font-size: 30pt;
+    color: black;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
+  
+@media screen and (max-width: 768px) {
+    main,
+    aside,
+    #solar {
+      flex-direction: column;
+    }
+  }
