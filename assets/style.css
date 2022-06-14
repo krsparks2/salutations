@@ -1,24 +1,29 @@
+* {
+    box-sizing: border-box;
+  }
 body, html {
 	height: 100%;
 	width: 100%;
 	position: relative;
     font-family: 'Patrick Hand', cursive;
-    background-image: linear-gradient( #bf033b 0%, #ffc719 74%);
+    background-image: linear-gradient( #bf033b 0%, #ffc719 74%, rgba(94, 206, 246, 0.997));
     background-position: left top, right top, bottom;
     overflow:auto;
     color: black;
 }
 
 .columns{
+    box-sizing: border-box;
+    width: 500 50px;
+    height: 50 50px;  
+    padding: 5px;
     border-radius: 10px;
     border: solid #242428 5px;
     margin-left: 2%;
     margin-right: 2%;
     border-radius: 5px;
-    box-sizing:inherit; 
-    display: flex;
-  flex-wrap: wrap;
-  padding: 0 6px;
+    display: flexbox;
+    flex-wrap: wrap;
 }
 
 .title{
@@ -92,4 +97,9 @@ p{
 #highnoon{
     position: auto;
     width: 22%;
+    align-content: right;
+}
+
+.where{
+    margin-top: 15%;
 }
