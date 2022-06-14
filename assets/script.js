@@ -18,6 +18,7 @@ function locationInput() {
     var location = locationEl.value;
 
     getCoordinates(location);
+    convertTime(location);
 }
 
 function getCoordinates(location) {
@@ -33,7 +34,7 @@ function getCoordinates(location) {
 
 function makeCall(lat, lon) {
     var date = dateEl.value;
-    // console.log("https://api.sunrise-sunset.org/json?lat=" + lat + "&lng=" + lon + "&date=" + '2022-06-21' + "&formatted=1");
+    // console.log("https://api.sunrise-sunset.org/json?lat=" + lat + "&lng=" + lon + "&date=" + '2022-06-21' + "&formatted=0");
 
     fetch("https://api.sunrise-sunset.org/json?lat=" + lat + "&lng=" + lon + "&date=" + date + "&formatted=0").then(function (result) {
         return result.json()
@@ -48,9 +49,12 @@ function sunEvent(results) {
     displayEl.innerHTML = '';
     solarNoonEl.innerHTML = '';
 
-    var sunrise = results.sunrise;
-    var sunset = results.sunset;
+    var sunrise = new Date(results.sunrise).toLocaleTimeString();
+    var sunset = new Date(results.sunset).toLocaleTimeString();
     var highnoon = new Date(results.solar_noon).toLocaleTimeString();
+    // var sunrise = results.sunrise;
+    // var sunset = results.sunset;
+    // var highnoon = results.solar_noon;
     console.log(sunrise);
     console.log(sunset);
     console.log(highnoon);
