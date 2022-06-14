@@ -1,51 +1,71 @@
+* {
+    box-sizing: border-box;
+  }
+
 body, html {
 	height: 100%;
 	width: 100%;
 	position: relative;
-    /* font-family: 'Amatic SC', cursive; */
-    font-family: 'Indie Flower', cursive;
-    background-image: linear-gradient( #bf033b 0%, #ffc719 74%);
+    font-family: 'Patrick Hand', cursive;
+    background: linear-gradient( #bf033b 0%, #ffc719 70%);
     background-position: left top, right top, bottom;
     overflow:auto;
+    color: black;
 }
 
 .columns{
+    box-sizing: border-box;
+    width: 500 50px;
+    height: 50 50px;  
+    padding: 5px;
     border-radius: 10px;
     border: solid #242428 5px;
     margin-left: 2%;
     margin-right: 2%;
     border-radius: 5px;
-    box-sizing:inherit; 
+    display: flexbox;
+    flex-wrap: wrap;
 }
 
 .title{
     font-size: 60px;
     text-align: center;
     font-weight: bolder;
+    color: black;
 }
 
 .subtitle{
     font-size: 30px;
     text-align: center;
+    color: black;
 }
 
-/* .where{
-    font-size: 30px;
-    font-weight: bold;
-} */
 
 img{
     border-radius: 15px 50px;
+    justify-content: center;
 }
 
-.button, .where{
+.button, .where, .column1, input[type="text"]{
     font-size: 30px;
     font-weight: bold;
+    margin: auto;
+    display: block;
+} 
+
+.content {
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+}
+
+p{
+    text-align: center;
 }
 .submitBtn {
     border-radius: 10rem;
-    font-family: 'Indie Flower', cursive;
-    background-image: linear-gradient( #bf033b 0%, #ffc719 80%);
+    font-family: 'Patrick Hand', cursive;
+    background-image: black;
     background-position: left top, right top, bottom;
 }
 
@@ -61,7 +81,6 @@ img{
     display: flex;
     align-items: stretch;
     justify-content: center;
-    font-size: 30px;
     font-weight: bold;
 }
 
@@ -73,4 +92,42 @@ img{
 #demo-anchored{
     background-color: #242428;
     color: white;
+}
+
+#sunrise{   
+    position: auto;
+    left:250px;
+    bottom: 100px;
+    margin-right: 500px;
+}
+.column1{
+
+    align-content: center;
+}
+
+#sunset{
+    position:auto;
+    bottom: 100px;
+    right: 50px;
+    object-position:bottom right;
+}
+
+#highnoon{
+    position: auto;
+    width: 22%;
+    align-content: right;
+}
+
+.enter{
+    margin-top: 15%;
+}
+
+input[type="text"] {
+    width: 400px;
+}
+
+.is-child {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }

@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link href="./assets/mobiscroll.javascript.min.css" rel="stylesheet" />
+    <link href="./assets/mobiscroll.javascript.min.css" rel="stylesheet" >
     <!-- google fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
-    <!-- tab title -->
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Heebo:wght@300&family=Patrick+Hand&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/style.css">
+        <!-- tab title -->
     <title>Salutations from the Sun</title>
-    <!-- <link rel="icon" href="assets/sun-icon.jpeg"> -->
-    <link rel="stylesheet" href="assets/style.css">
+    <link rel="icon" href="./assets/images/sun-icon.jpeg">
 </head>
 <body>
     <section class="hero"> 
@@ -25,37 +26,52 @@
             </p>
         </div>
     </section>
-    <div class="columns">
-        <div class="column is-one-third"><div>
+        <div class="column1 is-half">
             <div class="where">
-            Enter Location:
-            <label>
-                <input id="location" class="box" type="text" mbsc-input data-input-style="outline" placeholder="City, State" >
-            </label>
-            </div>
-            <br>
-            <div class="where">
-            Choose a Date:
-                <label class="date">
-                    <input id="demo-anchored" mbsc-input data-input-style="outline" data-label-style="stacked" placeholder="Please select..." />
+                <p>Enter Location:</p>
+                <label>
+                    <input id="location" class="box" type="text" mbsc-input data-input-style="outline" placeholder="City, State" >
                 </label>
             </div>
+            <div class="where">
+                <p> Choose a Date:
+                    <label class="date">
+                        <input id="demo-anchored" mbsc-input data-input-style="outline" data-label-style="stacked" placeholder="Please select..." />
+                    </label>
+            </div>
                 <button id="submit" class="button is-warning submitBtn">Submit</button>
-            </div>
         </div>
-    <div class="column is-two-thirds" id="column1">
-            <div id="solar-noon">
-            </div>
-             <div class="card-content">             
-              <div class="content">
-                    <img src="assets/sun-calculator.png" alt="Sun-set-rise">
-              </div>
-            </div>
-        <div id="displayBox">
-        </div>
-    </div>
+<br>
+
+<div class="tile is-ancestor">
+  <div class="tile is-parent">
+    <article class="tile is-child box" style="background-color: rgba(183, 220, 230, 0.869);">
+      <p class="title">Sunrise</p>
+      <img src="./assets/images/sunrise.png" alt="sunrise"style="height: 150px;"></img>
+      <div id="morning"></div>
+    </article>
+  </div>
+  <div class="tile is-parent">
+    <article class="tile is-child box" style="background-color: rgba(183, 220, 230, 0.869);">
+      <p class="title">Solar Noon</p>
+      <img src="./assets/images/sunny.png" alt="highnoon" style="height: 150px;"></img>
+      <div id="solar-noon"></div>
+    </article>
+  </div>
+  <div class="tile is-parent">
+    <article class="tile is-child box" style="background-color: rgba(183, 220, 230, 0.869);">
+      <p class="title">Sunset</p>
+      <img src="./assets/images/sunset.png" alt="sunrise" style="height: 150px;" ></img>
+      <div id="evening"></div>
+
+      </div>
+    </article>
+  </div>
 </div>
-    <script src="./assets/mobiscroll.javascript.min.js"></script>
-    <script src="./assets/script.js"></script>
+ 
+   
+<script src="./assets/mobiscroll.javascript.min.js"></script>
+<script src="./assets/script.js"></script>
+
 </body>
 </html>

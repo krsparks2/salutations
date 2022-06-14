@@ -11,8 +11,10 @@ var apiKey = "2f5d99e17f842067dee162b834d439f8";
 var submitBtn = document.getElementById("submit");
 var locationEl = document.getElementById("location");
 var dateEl = document.getElementById("demo-anchored");
-var displayEl = document.getElementById("displayBox");
-var solarNoonEl = document.getElementById("solar-noon")
+var eveningEl = document.getElementById("evening");
+var solarNoonEl = document.getElementById("solar-noon");
+var morningEl = document.getElementById("morning");
+
 
 function locationInput() {
     var location = locationEl.value;
@@ -45,8 +47,9 @@ function makeCall(lat, lon) {
 
 function sunEvent(results) {
     console.log(results);
-    displayEl.innerHTML = '';
-    solarNoonEl.innerHTML = '';
+    eveningEl.innerHTML = "";
+    solarNoonEl.innerHTML = "";
+    morningEl.innerHTML = "";
 
     var sunrise = new Date(results.sunrise).toLocaleTimeString();
     var sunset = new Date(results.sunset).toLocaleTimeString();
@@ -62,13 +65,15 @@ function sunEvent(results) {
     var sunsetEl = document.createElement("h2");
     var highnoonEl = document.createElement("h2");
     
-    sunriseEl.textContent = "sunrise: " + sunrise;
-    sunsetEl.textContent = "sunset: " + sunset;
-    highnoonEl.textContent = "high noon: " + highnoon;
+    sunriseEl.textContent = sunrise;
+    sunsetEl.textContent = sunset;
+    highnoonEl.textContent = highnoon;
 
-    displayEl.append(sunriseEl, sunsetEl);
+    morningEl.append(sunriseEl);
     solarNoonEl.append(highnoonEl);
+    eveningEl.append(sunsetEl);
 }
 
 //Event Listeners
 submitBtn.addEventListener("click", locationInput)
+
