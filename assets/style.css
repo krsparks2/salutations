@@ -28,19 +28,22 @@ body, html {
 }
 
 .title{
-    font-size: 40px;
+    font-size: 60px;
     text-align: center;
     font-weight: bolder;
+    color: black;
 }
 
 .subtitle{
     font-size: 30px;
     text-align: center;
+    color: black;
 }
 
 
 img{
     border-radius: 15px 50px;
+    justify-content: center;
 }
 
 .button, .where, .column1, input[type="text"]{
@@ -121,4 +124,10 @@ p{
 
 input[type="text"] {
     width: 400px;
+}
+
+.is-child {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
