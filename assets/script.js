@@ -18,7 +18,6 @@ function locationInput() {
     var location = locationEl.value;
 
     getCoordinates(location);
-    convertTime(location);
 }
 
 function getCoordinates(location) {
@@ -68,7 +67,6 @@ function sunEvent(results) {
     highnoonEl.textContent = "high noon: " + highnoon;
 
     displayEl.append(sunriseEl, sunsetEl);
-    // displayEl[0].appendChild(sunsetEl);
     solarNoonEl.append(highnoonEl);
 }
 
