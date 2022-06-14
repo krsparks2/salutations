@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link href="./assets/mobiscroll.javascript.min.css" rel="stylesheet" />
+    <link href="./assets/mobiscroll.javascript.min.css" rel="stylesheet" >
     <!-- google fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Heebo:wght@300&family=Patrick+Hand&family=Roboto&display=swap" rel="stylesheet">
-    <!-- tab title -->
+    <link rel="stylesheet" href="./assets/style.css">
+        <!-- tab title -->
     <title>Salutations from the Sun</title>
-    <link rel="icon" href="./assets/images/sun-icon.jpeg"">
+    <link rel="icon" href="./assets/images/sun-icon.jpeg">
 </head>
 <body>
     <section class="hero"> 
@@ -25,68 +26,49 @@
             </p>
         </div>
     </section>
-    <div class="columns">
-        <div class="column is-one-third"><div>
+        <div class="column1 is-half">
             <div class="where">
-            <p>Enter Location:</p>
-            <label>
-                <input id="location" class="box" type="text" mbsc-input data-input-style="outline" placeholder="City, State" >
-            </label>
-            </div>
-            <br>
-            <div class="where">
-            <p> Choose a Date:
-                <label class="date">
-                    <input id="demo-anchored" mbsc-input data-input-style="outline" data-label-style="stacked" placeholder="Please select..." />
+                <p>Enter Location:</p>
+                <label>
+                    <input id="location" class="box" type="text" mbsc-input data-input-style="outline" placeholder="City, State" >
                 </label>
             </div>
-<<<<<<< HEAD
-            <div id="button is-ghost">
-                <button id="submit" class="button is-ghost">Submit</button>
+            <div class="where">
+                <p> Choose a Date:
+                    <label class="date">
+                        <input id="demo-anchored" mbsc-input data-input-style="outline" data-label-style="stacked" placeholder="Please select..." />
+                    </label>
             </div>
-            </div>
-=======
                 <button id="submit" class="button is-warning submitBtn">Submit</button>
-            </div>
         </div>
-    <div class="column is-two-thirds" id="column1">
-            <div id="solar-noon">
-            </div>
-             <div class="card-content">             
-              <div class="content">
-                    <img src="assets/sun-calculator.png" alt="Sun-set-rise">
-              </div>
-            </div>
-        <div id="displayBox">
->>>>>>> main
-        </div>
-    <div class="column is-two-thirds" id="column1">    
-       <ul>
-        <li>
-            <div class="displayBox"><img src="./assets/images/sunrise.png" alt="sunrise"style="height: 150px;" id="sunrise"></div>
-            <hr>
-        </li>
-        <li>
-            <div class="solar-noon"><img src="./assets/images/sunny.png" alt="highnoon" style="height: 150px;" id="highnoon"></div>
-            <hr>
-        </li>
-        <li>
-            <div class="displayBox">
-            <img src="./assets/images/sunset.png" alt="sunrise" style="height: 150px;" id="sunset"></div>
-        </li>
-       </ul>
-        <!-- <div class="solar-noon"> </div>
-        <div class="displayBox"> -->
-            <!-- <img src="./assets/images/sunrise.png" alt="sunrise"style="height: 150px;" id="sunrise">
-            <hr> -->
-            <!-- <img src="./assets/images/sunny.png" alt="highnoon" style="height: 150px;" id="highnoon">
-            <hr>
-            <img src="./assets/images/sunset.png" alt="sunrise" style="height: 150px;" id="sunset"> -->
-        <!-- </div> -->
-    </div>
-    </div>
+<br>
+
+<div class="tile is-ancestor">
+  <div class="tile is-parent">
+    <article class="tile is-child box" style="background-color: rgba(183, 220, 230, 0.869);">
+      <p class="title">Sunrise</p>
+      <img src="./assets/images/sunrise.png" alt="sunrise"style="height: 150px;"></img>
+    </article>
+  </div>
+  <div class="tile is-parent">
+    <article class="tile is-child box" id="afternoon" style="background-color: rgba(183, 220, 230, 0.869);">
+      <p class="title" id="solar-noon">Solar Noon</p>
+      <img src="./assets/images/sunny.png" alt="highnoon" style="height: 150px;"></img>
+    </article>
+  </div>
+  <div class="tile is-parent">
+    <article class="tile is-child box" style="background-color: rgba(183, 220, 230, 0.869);">
+      <p class="title">Sunset</p>
+      <img src="./assets/images/sunset.png" alt="sunrise" style="height: 150px;" ></img>
+      </div>
+    </article>
+  </div>
 </div>
-    <script src="./assets/mobiscroll.javascript.min.js"></script>
-    <script src="./assets/script.js"></script>
+
+<div class="displayBox"></div>  
+   
+<script src="./assets/mobiscroll.javascript.min.js"></script>
+<script src="./assets/script.js"></script>
+
 </body>
 </html>
