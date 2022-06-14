@@ -37,12 +37,16 @@ body, html {
     text-align: center;
 }
 
-p{
+/* .where{
     font-size: 30px;
     font-weight: bold;
+} */
+
+img{
+    border-radius: 15px 50px;
 }
 
-.button{
+.button, .where{
     font-size: 30px;
     font-weight: bold;
     margin: auto;
@@ -52,8 +56,14 @@ p{
 p{
     text-align: center;
 }
+.submitBtn {
+    border-radius: 10rem;
+    font-family: 'Indie Flower', cursive;
+    background-image: linear-gradient( #bf033b 0%, #ffc719 80%);
+    background-position: left top, right top, bottom;
+}
 
-.displayBox ::cue {
+#displayBox {
     display: flex;
     align-items: stretch;
     justify-content: space-between;
@@ -61,7 +71,7 @@ p{
     font-weight: bold;
 }
 
-.solar-noon {
+#solar-noon {
     display: flex;
     align-items: stretch;
     justify-content: center;
@@ -69,7 +79,7 @@ p{
     font-weight: bold;
 }
 
-#box{
+#location{
     background-color: #242428;
     color: white;
 }

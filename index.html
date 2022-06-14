@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link href="./assets/mobiscroll.javascript.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="assets/style.css">
     <!-- google fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Heebo:wght@300&family=Patrick+Hand&family=Roboto&display=swap" rel="stylesheet">
     <!-- tab title -->
@@ -22,7 +21,7 @@
             </h1>
             <!-- changed <p> to <h1> -->
             <p class="subtitle">
-                 Search the time and location for any sunrise and the sunset anywhere, anytime!
+                 A handy app to find the time of the sunrise and the sunset any where!
             </p>
         </div>
     </section>
@@ -31,7 +30,7 @@
             <div class="where">
             <p>Enter Location:</p>
             <label>
-                <input class="Location" id="box" type="text" mbsc-input data-input-style="outline" placeholder="City, State" >
+                <input id="location" class="box" type="text" mbsc-input data-input-style="outline" placeholder="City, State" >
             </label>
             </div>
             <br>
@@ -41,10 +40,25 @@
                     <input id="demo-anchored" mbsc-input data-input-style="outline" data-label-style="stacked" placeholder="Please select..." />
                 </label>
             </div>
+<<<<<<< HEAD
             <div id="button is-ghost">
                 <button id="submit" class="button is-ghost">Submit</button>
             </div>
             </div>
+=======
+                <button id="submit" class="button is-warning submitBtn">Submit</button>
+            </div>
+        </div>
+    <div class="column is-two-thirds" id="column1">
+            <div id="solar-noon">
+            </div>
+             <div class="card-content">             
+              <div class="content">
+                    <img src="assets/sun-calculator.png" alt="Sun-set-rise">
+              </div>
+            </div>
+        <div id="displayBox">
+>>>>>>> main
         </div>
     <div class="column is-two-thirds" id="column1">    
        <ul>
@@ -72,8 +86,6 @@
     </div>
     </div>
 </div>
-    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
     <script src="./assets/mobiscroll.javascript.min.js"></script>
     <script src="./assets/script.js"></script>
 </body>
