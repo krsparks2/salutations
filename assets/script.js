@@ -1,7 +1,7 @@
-
-mobiscroll.datepicker('#demo-anchored', {
-    controls: ['calendar'],
-    display: 'anchored'
+//Calendar
+mobiscroll.datepicker("#demo-anchored", {
+    controls: ["calendar"],
+    display: "anchored"
 });
 
 //Global Variables
@@ -11,17 +11,18 @@ var apiKey = "2f5d99e17f842067dee162b834d439f8";
 var submitBtn = document.getElementById("submit");
 var locationEl = document.getElementById("location");
 var dateEl = document.getElementById("demo-anchored");
-var eveningEl = document.getElementById("evening");
-var solarNoonEl = document.getElementById("solar-noon");
 var morningEl = document.getElementById("morning");
+var solarNoonEl = document.getElementById("solar-noon");
+var eveningEl = document.getElementById("evening");
 
-
+//Handles user location input
 function locationInput() {
     var location = locationEl.value;
 
     getCoordinates(location);
 }
 
+//Passes user input through API to call coordinates
 function getCoordinates(location) {
     var queryURL = "https://api.openweathermap.org/geo/1.0/direct?q=" + location + "&appid=" + apiKey;
 
@@ -33,9 +34,9 @@ function getCoordinates(location) {
         });
 };
 
+//Passes called coordinates through API to grab sun data times
 function makeCall(lat, lon) {
     var date = dateEl.value;
-    // console.log("https://api.sunrise-sunset.org/json?lat=" + lat + "&lng=" + lon + "&date=" + '2022-06-21' + "&formatted=0");
 
     fetch("https://api.sunrise-sunset.org/json?lat=" + lat + "&lng=" + lon + "&date=" + date + "&formatted=0").then(function (result) {
         return result.json()
@@ -45,29 +46,30 @@ function makeCall(lat, lon) {
     });
 }
 
+//Changes data results to local time & dynamically creates elements to append results to main body
 function sunEvent(results) {
     console.log(results);
-    eveningEl.innerHTML = "";
-    solarNoonEl.innerHTML = "";
     morningEl.innerHTML = "";
+    solarNoonEl.innerHTML = "";
+    eveningEl.innerHTML = "";
 
     var sunrise = new Date(results.sunrise).toLocaleTimeString();
-    var sunset = new Date(results.sunset).toLocaleTimeString();
     var highnoon = new Date(results.solar_noon).toLocaleTimeString();
+    var sunset = new Date(results.sunset).toLocaleTimeString();
     // var sunrise = results.sunrise;
     // var sunset = results.sunset;
     // var highnoon = results.solar_noon;
     console.log(sunrise);
-    console.log(sunset);
     console.log(highnoon);
+    console.log(sunset);
 
     var sunriseEl = document.createElement("h2");
-    var sunsetEl = document.createElement("h2");
     var highnoonEl = document.createElement("h2");
+    var sunsetEl = document.createElement("h2");
     
     sunriseEl.textContent = sunrise;
-    sunsetEl.textContent = sunset;
     highnoonEl.textContent = highnoon;
+    sunsetEl.textContent = sunset;
 
     morningEl.append(sunriseEl);
     solarNoonEl.append(highnoonEl);
@@ -76,4 +78,3 @@ function sunEvent(results) {
 
 //Event Listeners
 submitBtn.addEventListener("click", locationInput)
-
