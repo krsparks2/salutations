@@ -34,7 +34,7 @@ function getCoordinates(location) {
         });
 };
 
-//Passes called coordinates through API to grab sun data times
+//Passes called coordinates through API to grab sun event times
 function makeCall(lat, lon) {
     var date = dateEl.value;
 
@@ -59,9 +59,9 @@ function sunEvent(results) {
     // var sunrise = results.sunrise;
     // var sunset = results.sunset;
     // var highnoon = results.solar_noon;
-    console.log(sunrise);
-    console.log(highnoon);
-    console.log(sunset);
+    // console.log(sunrise);
+    // console.log(highnoon);
+    // console.log(sunset);
 
     var sunriseEl = document.createElement("h2");
     var highnoonEl = document.createElement("h2");
