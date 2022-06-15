@@ -15,61 +15,63 @@
     <link rel="icon" href="./assets/images/sun-icon.jpeg">
 </head>
 <body>
+
+<!-- Hero -->
     <section class="hero"> 
         <div class="hero-body">
-            <h1 class="title">
+            <h1 class="title" id="h1">
                  Salutations from the Sun!
             </h1>
             <!-- changed <p> to <h1> -->
-            <p class="subtitle">
+            <p class="subtitle" id="description">
                  A handy app to find the time of the sunrise and the sunset wherever you are!
             </p>
+            <hr>
         </div>
     </section>
-        <div class="column1 is-half">
-            <div class="where">
-                <p>Enter Location:</p>
-                <label>
-                    <input id="location" class="box" type="text" mbsc-input data-input-style="outline" placeholder="City, State" >
-                </label>
-            </div>
-            <div class="where">
-                <p> Choose a Date:
-                    <label class="date">
-                        <input id="demo-anchored" mbsc-input data-input-style="outline" data-label-style="stacked" placeholder="Please select..." />
-                    </label>
-            </div>
-                <button id="submit" class="button is-warning submitBtn">Submit</button>
-        </div>
-<br>
+<main>
+<!-- Date and Location Search -->
+<aside>
+    <p class="enter">Enter Location:</p>
+            <label>
+            <input id="location" class="box" type="text" mbsc-input data-input-style="outline" placeholder="City, State" >
+            </label>
+    <p> Choose a Date:</p>
+    <label class="date">
+    <input id="demo-anchored" mbsc-input data-input-style="outline" data-label-style="stacked" placeholder="Please select..." />
+    </label>
+    <button id="submit" class="button is-warning submitBtn">Submit</button>
+</aside>
 
-<div class="tile is-ancestor">
-  <div class="tile is-parent">
+<!-- Time and Icons -->
+<div class="tile is-ancestor" id="solar" >
+  <div class="tile is-parent" id= "sunrise">
     <article class="tile is-child box" style="background-color: rgba(183, 220, 230, 0.869);">
       <p class="title">Sunrise</p>
+      <br>
       <img src="./assets/images/sunrise.png" alt="sunrise"style="height: 150px;"></img>
       <div id="morning"></div>
     </article>
   </div>
-  <div class="tile is-parent">
+  <div class="tile is-parent" id= "noon">
     <article class="tile is-child box" style="background-color: rgba(183, 220, 230, 0.869);">
       <p class="title">Solar Noon</p>
+      <br>
       <img src="./assets/images/sunny.png" alt="highnoon" style="height: 150px;"></img>
       <div id="solar-noon"></div>
     </article>
   </div>
-  <div class="tile is-parent">
+  <div class="tile is-parent" id= "sunset">
     <article class="tile is-child box" style="background-color: rgba(183, 220, 230, 0.869);">
-      <p class="title">Sunset</p>
+      <p class="title" itemid="set">Sunset</p>
+      <br>
       <img src="./assets/images/sunset.png" alt="sunrise" style="height: 150px;" ></img>
       <div id="evening"></div>
-
-      </div>
     </article>
   </div>
 </div>
- 
-   
+</main> 
+</body>  
 <script src="./assets/mobiscroll.javascript.min.js"></script>
 <script src="./assets/script.js"></script>
 
