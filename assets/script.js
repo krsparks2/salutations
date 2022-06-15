@@ -46,7 +46,7 @@ function makeCall(lat, lon) {
     });
 }
 
-//Changes data results to local time & dynamically creates elements to append results to main body
+//Changes UTC data results to local time & dynamically creates elements to append results to main body
 function sunEvent(results) {
     console.log(results);
     morningEl.innerHTML = "";
